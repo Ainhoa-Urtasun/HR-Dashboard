@@ -10,4 +10,5 @@ from diagrams import Diagram, Cluster
 from diagrams.aws.compute import EC2
   
 with Diagram("Simple Website Diagram") as ddd:
-  svc_group = [EC2(label),EC2(label),EC2("Webserver 3")]
+  def l(label):
+    svc_group = [EC2(label),EC2(label),EC2("Webserver 3")]
