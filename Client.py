@@ -6,7 +6,7 @@ from diagrams.onprem.database import PostgreSQL # Would typically use RDS from a
 from diagrams.onprem.inmemory import Redis # Would typically use ElastiCache from aws.database
 
 def Client():
-  with Diagram("Simple Website Diagram") as diag:
+  with Diagram("Simple Website Diagram",show=False) as diag:
     dns = Route53("dns")
     load_balancer = ELB("Load Balancer")
     database = PostgreSQL("User Database")
