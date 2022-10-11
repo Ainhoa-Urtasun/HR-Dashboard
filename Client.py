@@ -5,7 +5,7 @@ from diagrams.aws.network import Route53
 from diagrams.onprem.database import PostgreSQL # Would typically use RDS from aws.database
 from diagrams.onprem.inmemory import Redis # Would typically use ElastiCache from aws.database
 
-def Client():
+def Client(dd):
   with Diagram() as dd:
     dns = Route53("dns")
     load_balancer = ELB("Load Balancer")
