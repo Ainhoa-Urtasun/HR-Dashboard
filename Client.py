@@ -1,6 +1,4 @@
-from graphviz import Digraph
-def Client(description):
-  G = Digraph()
-  G.node('Support',r'Finance\nAccounting\nManagement')
-  G.node('Core',description)
-  G.edge('Support','Core')
+def printinfo(name,age):
+   print "Name: ", name
+   print "Age ", age
+   return;
