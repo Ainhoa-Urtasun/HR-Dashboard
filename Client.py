@@ -6,9 +6,10 @@ def Core(label):
 G.edge('Support','Core')
 
 
-from diagrams import Diagram, Cluster
+from diagrams import Diagram
 from diagrams.aws.compute import EC2
-  
-with Diagram("Simple Website Diagram") as ddd:
-  def l(label):
-    svc_group = [EC2(label),EC2(label),EC2("Webserver 3")]
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Web Service", show=False) as flow:
+    ELB("lb") >> EC2("web") >> RDS("userdb")
