@@ -1,5 +1,4 @@
 from diagrams import Diagram
 
-with Diagram("Simple Website Diagram") as diag:
+with Diagram(label) as diag(label='Ainhoa'):
     pass
-diag # This will illustrate the diagram if you are using a Google Colab or Jypiter notebook.
