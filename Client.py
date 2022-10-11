@@ -1,21 +1,6 @@
-from diagrams import Diagram, Cluster
-from diagrams.aws.compute import EC2
-from diagrams.aws.network import ELB
-from diagrams.aws.network import Route53
-from diagrams.onprem.database import PostgreSQL # Would typically use RDS from aws.database
-from diagrams.onprem.inmemory import Redis # Would typically use ElastiCache from aws.database
-
-def Client(dd):
-  with Diagram() as dd:
-    dns = Route53("dns")
-    load_balancer = ELB("Load Balancer")
-    database = PostgreSQL("User Database")
-    cache = Redis("Cache")
-    with Cluster("Webserver Cluster"):
-        svc_group = [EC2("Webserver 1"),
-                    EC2("Webserver 2"),
-                    EC2("Webserver 3")]
-    dns >> load_balancer >> svc_group
-    svc_group >> cache
-    svc_group >> database
-  dd
+from graphviz import Digraph
+G = Digraph()
+G.node('Support',r'Finance (Unit 2)\nAccounting (Unit 4)\nManagement (Unit 5)')
+G.node('Primary',r'Production (Unit 3)\nMarketing (Unit 6)')
+G.edge('Support','Primary')
+G
