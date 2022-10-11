@@ -1,5 +1,3 @@
-pip install diagrams
-
 def Client(Core):
   labels = {0:Core,1:'SUPPORT ACTIVITIES\nManagement\nHRM\nFinance\nAccounting'
   colors = {0:'grey',1:'gold'}
