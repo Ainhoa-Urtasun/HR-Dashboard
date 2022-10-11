@@ -10,5 +10,5 @@ from diagrams import Diagram, Cluster
 from diagrams.aws.compute import EC2
   
 def CCore(label):
-  with Diagram("Simple Website Diagram") as diag:
+  with Diagram("Simple Website Diagram") as dd:
     svc_group = [EC2(label),EC2(label),EC2("Webserver 3")]
