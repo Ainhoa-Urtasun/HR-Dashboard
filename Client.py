@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-pip3 install netgraph
+!pip install netgraph
 from netgraph import Graph
 
 def Client(Core):
