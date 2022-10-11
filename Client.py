@@ -5,3 +5,5 @@ from diagrams.aws.network import ELB
 
 with Diagram('Client', show=False) as flow:
     ELB("Support") >> EC2("Core")
+def explain(label):
+    print(label)
