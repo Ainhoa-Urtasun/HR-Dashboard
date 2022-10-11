@@ -12,3 +12,4 @@ from diagrams.aws.compute import EC2
 def CCore(label):
   with Diagram("Simple Website Diagram") as ddd:
     svc_group = [EC2(label),EC2(label),EC2("Webserver 3")]
+  ddd
