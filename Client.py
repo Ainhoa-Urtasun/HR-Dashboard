@@ -18,3 +18,4 @@ def Client():
     dns >> load_balancer >> svc_group
     svc_group >> cache
     svc_group >> database
+  diag
