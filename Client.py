@@ -4,4 +4,3 @@ def Client(description):
   G.node('Support',r'Finance\nAccounting\nManagement')
   G.node('Core',description)
   G.edge('Support','Primary')
-  G
