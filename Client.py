@@ -6,11 +6,15 @@ from diagrams.onprem.database import PostgreSQL # Would typically use RDS from a
 from diagrams.onprem.inmemory import Redis # Would typically use ElastiCache from aws.database
 
 def Client():
-  with Diagram("Simple Website Diagram",show=False) as diag:
+  with Diagram("Simple Website Diagram",show=False,direction='LR') as diag: # It's LR by default, but you have a few options with the orientation
     dns = Route53("dns")
     load_balancer = ELB("Load Balancer")
     database = PostgreSQL("User Database")
     cache = Redis("Cache")
-    svc_group = [EC2("Webserver 1"),
-                 EC2("Webserver 2"),
-                 EC2("Webserver 3")]
+    with Cluster("Webserver Cluster"):
+        svc_group = [EC2("Webserver 1"),
+                    EC2("Webserver 2"),
+                    EC2("Webserver 3")]
+    dns >> load_balancer >> svc_group
+    svc_group >> cache
+    svc_group >> database
