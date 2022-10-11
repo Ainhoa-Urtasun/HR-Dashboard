@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-pip install https://github.com/paulbrodersen/netgraph.git
+git clone https://github.com/paulbrodersen/netgraph.git
+sudo python setup.py install
 from netgraph import Graph
 
 def Client(Core):
