@@ -1,3 +1,4 @@
 import graphviz
 Firm = graphviz.Digraph(node_attr={'shape':'record','color':'lightblue'})
-Firm.node('Firm',r'{SUPPORT|{Management|HRM|{Job Analysis and Design|HR Planning|Hiring|Performance Evaluation|Training|Career Development|Compensation}|Finance}}')
+Firm.node('n0',r'{SUPPORT|{Management|HRM|{Job Analysis and Design|HR Planning|Hiring|Performance Evaluation|Training|Career Development|Compensation}|Finance}}')
+Firm.node('n1','CORE')
