@@ -6,3 +6,4 @@ fig = plt.figure(figsize=(4,4),dpi=100)
 L = numpy.linspace(1,10,100)
 def w(text):
   plt.plot(L,text)
+plt.show()
