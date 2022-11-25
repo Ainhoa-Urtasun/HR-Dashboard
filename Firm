@@ -4,4 +4,3 @@ Firm.node('n0',r'{SUPPORT ACTIVITIES|{Management|HRM|Finance|Accounting|Marketin
 def w(text):
   Firm.node('n1',text,color='black',style='filled',fillcolor='lightpink')
 Firm.edge('n0','n1')
-Firm
