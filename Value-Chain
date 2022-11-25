@@ -1,6 +1,6 @@
 import graphviz
-Firm = graphviz.Digraph(node_attr={'shape':'record'})
-Firm.node('n0',r'{SUPPORT ACTIVITIES|{Management|HRM|Finance|Accounting|Marketing}}',color='white',style='filled',fillcolor='lightblue')
+Value-Chain = graphviz.Digraph(node_attr={'shape':'record'})
+Value-Chain.node('n0',r'{SUPPORT ACTIVITIES|{Management|HRM|Finance|Accounting|Marketing}}',color='white',style='filled',fillcolor='lightblue')
 def w(text):
-  Firm.node('n1',text,color='black',style='filled',fillcolor='lightpink')
-Firm.edge('n0','n1')
+  Value-Chain.node('n1',text,color='black',style='filled',fillcolor='lightpink')
+Value-Chain.edge('n0','n1')
