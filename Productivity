@@ -1,1 +1,8 @@
-hkjkjkj
+import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
+import numpy
+
+fig = plt.figure(figsize=(4,4),dpi=100)
+L = numpy.linspace(1,10,100)
+def w(text):
+  plt.plot(L,text)
