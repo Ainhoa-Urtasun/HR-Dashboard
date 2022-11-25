@@ -1,6 +1,6 @@
 import graphviz
-Firm = graphviz.Digraph(node_attr={'shape':'record','color':'lightblue'})
-Firm.node('n0',r'{SUPPORT|{Management|HRM|{Job Analysis and Design|HR Planning|Hiring|Performance Evaluation|Training|Career Development|Compensation}|Finance}}')
+Firm = graphviz.Digraph(node_attr={'shape':'record'})
+Firm.node('n0',r'{SUPPORT ACTIVITIES|{Management|HRM|Finance|Accounting|Marketing}}',color='white',style='filled',fillcolor='lightblue')
 def CORE(text):
-  Firm.node('n1',text)
+  Firm.node('n1',text,color='black',style='filled',fillcolor='lightpink')
 Firm.edge('n0','n1')
