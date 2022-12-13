@@ -7,7 +7,6 @@ Firm
 
 import matplotlib.pyplot as plt
 fig = plt.figure(figsize=(4,4),dpi=100)
-years = [2017,2018,2019,2020]
-plt.plot(years,[10000,2999,3999,4000],color='blue',label='Labor productivity')
+plt.plot([2017,2018,2019,2020],[10000,2999,3999,4000],color='blue',label='Labor productivity')
 plt.xlabel('Years',x=1)
 plt.show()
